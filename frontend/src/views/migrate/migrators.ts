@@ -6,6 +6,7 @@ import vikunjaFileIcon from './icons/vikunja-file.png?url'
 import tickTickIcon from './icons/ticktick.svg?url'
 import wekanIcon from './icons/wekan.png?url'
 import csvIcon from './icons/csv.svg?url'
+import linearIcon from './icons/linear.png?url'
 
 export interface Migrator {
 	id: string
@@ -64,5 +65,11 @@ export const MIGRATORS = {
 		icon: csvIcon as string,
 		isFileMigrator: true,
 		isCSVMigrator: true,
+	},
+	linear: {
+		id: 'linear',
+		name: 'Linear',
+		icon: linearIcon,
+		isFileMigrator: true,
 	},
 } as const satisfies IMigratorRecord

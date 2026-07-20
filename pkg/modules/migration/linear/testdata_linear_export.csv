@@ -1,0 +1,13 @@
+"ID","Team","Title","Description","Status","Estimate","Priority","Project ID","Project","Creator","Assignee","Labels","Cycle Number","Cycle Name","Cycle Start","Cycle End","Created","Updated","Started","Triaged","Completed","Canceled","Archived","Due Date","Parent issue","Initiatives","Project Milestone ID","Project Milestone","SLA Status","UUID","Time in status (minutes)","Related to","Blocked by","Duplicate of"
+"CAT-1","CatlowTech","Set up marketing site","","Todo","","Medium","proj-1","Website","user@example.com","user@example.com","bug, ui","","","","","Tue Jun 30 2026 00:43:35 GMT+0000 (GMT+00:00)","","","","","","","","","","","","","uuid-1","","","",""
+"CAT-2","CatlowTech","Ship pricing page","","Done","","High","proj-1","Website","user@example.com","user@example.com","","","","","","Tue Jun 30 2026 00:44:00 GMT+0000 (GMT+00:00)","","","","Wed Jul 01 2026 02:39:30 GMT+0000 (GMT+00:00)","","","","","","","","uuid-2","","","",""
+"CAT-3","CatlowTech","Old rebrand idea","","Canceled","","Urgent","","","user@example.com","","","","","","","Tue Jun 30 2026 00:45:00 GMT+0000 (GMT+00:00)","","","","","Thu Jul 09 2026 01:31:46 GMT+0000 (GMT+00:00)","","","","","","","uuid-3","","","",""
+"CAT-4","CatlowTech","Investigate flaky CI","## Problem
+
+CI fails intermittently on the ""build"" step.
+
+## Notes
+- happens ~1 in 20 runs","Backlog","","No priority","","","user@example.com","","","","","","","Tue Jun 30 2026 00:46:00 GMT+0000 (GMT+00:00)","","","","","","","2026-08-01","","","","","uuid-4","","","",""
+"CAT-5","CatlowTech","Add checkout button","","Todo","","Medium","proj-1","Website","user@example.com","user@example.com","ui","","","","","Tue Jun 30 2026 00:47:00 GMT+0000 (GMT+00:00)","","","","","","","","CAT-1","","","","","uuid-5","","CAT-1, CAT-2","CAT-3",""
+"CAT-6","CatlowTech","Duplicate pricing task","","Canceled","","Low","proj-1","Website","user@example.com","","","","","","","Tue Jun 30 2026 00:48:00 GMT+0000 (GMT+00:00)","","","","","Sun Jul 12 2026 15:53:31 GMT+0000 (GMT+00:00)","","","","","","","uuid-6","","","","CAT-2"
+"ENG-1","Engineering","Migrate CI to new runners","","Todo","","High","","","user@example.com","user@example.com","infra","","","","","Tue Jun 30 2026 00:49:00 GMT+0000 (GMT+00:00)","","","","","","","","","","","","uuid-7","","","",""

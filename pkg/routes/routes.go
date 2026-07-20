@@ -71,6 +71,7 @@ import (
 	"code.vikunja.io/api/pkg/modules/migration"
 	csvmigrator "code.vikunja.io/api/pkg/modules/migration/csv"
 	migrationHandler "code.vikunja.io/api/pkg/modules/migration/handler"
+	"code.vikunja.io/api/pkg/modules/migration/linear"
 	microsofttodo "code.vikunja.io/api/pkg/modules/migration/microsoft-todo"
 	"code.vikunja.io/api/pkg/modules/migration/ticktick"
 	"code.vikunja.io/api/pkg/modules/migration/todoist"
@@ -1023,6 +1024,14 @@ func registerMigrations(m *echo.Group) {
 		},
 	}
 	wekanFileMigrator.RegisterRoutes(m)
+
+	// Linear File Migrator
+	linearFileMigrator := migrationHandler.FileMigratorWeb{
+		MigrationStruct: func() migration.FileMigrator {
+			return &linear.Migrator{}
+		},
+	}
+	linearFileMigrator.RegisterRoutes(m)
 
 	// CSV File Migrator (always enabled - generic import)
 	csvFileMigrator := &csvmigrator.MigratorWeb{}

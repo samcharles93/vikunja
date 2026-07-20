@@ -23,6 +23,7 @@ import (
 	"code.vikunja.io/api/pkg/config"
 	"code.vikunja.io/api/pkg/modules/migration"
 	migrationHandler "code.vikunja.io/api/pkg/modules/migration/handler"
+	"code.vikunja.io/api/pkg/modules/migration/linear"
 	"code.vikunja.io/api/pkg/modules/migration/ticktick"
 	vikunja_file "code.vikunja.io/api/pkg/modules/migration/vikunja-file"
 	"code.vikunja.io/api/pkg/modules/migration/wekan"
@@ -46,6 +47,7 @@ func RegisterMigrationFileRoutes(api huma.API) {
 	registerFileMigrator(api, func() migration.FileMigrator { return &vikunja_file.FileMigrator{} })
 	registerFileMigrator(api, func() migration.FileMigrator { return &ticktick.Migrator{} })
 	registerFileMigrator(api, func() migration.FileMigrator { return &wekan.Migrator{} })
+	registerFileMigrator(api, func() migration.FileMigrator { return &linear.Migrator{} })
 }
 
 func init() { AddRouteRegistrar(RegisterMigrationFileRoutes) }
